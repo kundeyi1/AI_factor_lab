@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>因子实验室</title>
+  <link rel="stylesheet" href="/static/styles.css?v=20260713-share-ready">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <header class="brand">
+        <div class="brand-mark"><i class="fa-solid fa-robot"></i></div>
+        <div>
+          <h1>因子实验室</h1>
+          <p>与 AI 对话，发现 alpha</p>
+        </div>
+      </header>
+
+      <section class="chat-panel" aria-label="AI 因子对话">
+        <div class="messages" id="chat-messages">
+          <article class="message ai">
+            <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+            <div class="bubble">用一句话描述你想找的因子，AI 会先生成表达式；确认后再回测。</div>
+          </article>
+        </div>
+
+        <form class="chat-input" id="chat-form">
+          <textarea id="chat-input" rows="2" placeholder="输入因子想法...（Enter 发送）"></textarea>
+          <button type="submit" class="icon-button primary" title="发送">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </section>
+
+      <section class="vault-panel" aria-label="因子库">
+        <button id="vault-toggle" class="wide-button" type="button">
+          <i class="fa-solid fa-book"></i>
+          <span>因子库</span>
+        </button>
+        <div id="factor-list" class="factor-list"></div>
+      </section>
+
+      <section class="provider-panel" aria-label="大模型设置">
+        <label for="ai-provider">大模型供应商</label>
+        <select id="ai-provider">
+          <option value="deepseek" selected>DeepSeek</option>
+          <option value="openai">OpenAI</option>
+        </select>
+        <label for="api-key">模型 API Key</label>
+        <input id="api-key" type="password" autocomplete="off" placeholder="优先使用这里输入的 Key">
+        <p class="privacy-note">临时分享时建议直接编辑表达式回测；如需 AI，优先由主机设置环境变量，不要在公共链接中输入重要密钥。</p>
+      </section>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <div class="title-row">
+            <input id="factor-name" class="factor-title" value="短期情绪反弹因子" aria-label="因子名称">
+            <span id="status-pill" class="status-pill">待回测</span>
+          </div>
+          <p id="status-text">AI 只负责生成表达式。请人工确认后开始回测。</p>
+        </div>
+        <button id="run-backtest" class="run-button" type="button">
+          <i class="fa-solid fa-play"></i>
+          <span>开始回测</span>
+        </button>
+      </header>
+
+      <section class="expression-panel">
+        <div class="section-heading">
+          <h2><i class="fa-solid fa-code"></i> 当前因子表达式</h2>
+          <button id="save-factor" class="icon-button" type="button" title="回测后保存到因子库">
+            <i class="fa-solid fa-floppy-disk"></i>
+          </button>
+        </div>
+        <textarea id="factor-expression" spellcheck="false">ts_rank(power(abs(pctChg), 2), 5) * ts_rank(power(abs(ts_delta(close, 1)), 2), 5)</textarea>
+        <p id="factor-description" class="factor-description">该因子通过计算过去 5 个交易日内日涨跌幅绝对值平方的时序滚动排名，与过去 1 个交易日内收盘价变动绝对值平方的时序滚动排名相乘，来捕捉短期情绪反弹。日涨跌幅的平方用于强调较大的价格波动，而收盘价变动的平方用于强调短期内的价格反转。</p>
+      </section>
+
+      <section class="controls-panel">
+        <div class="field-group date-range">
+          <label>日期范围</label>
+          <div class="inline-fields">
+            <input id="start-date" type="date" value="2025-06-20">
+            <span>至</span>
+            <input id="end-date" type="date" value="2026-06-01">
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="pool">股票池</label>
+          <select id="pool">
+            <option value="hs300" selected>沪深300（core: 000300）</option>
+            <option value="zz500">中证500（core: 000905）</option>
+            <option value="zz1000">中证1000（core: 000852）</option>
+            <option value="csi1800">1800（沪深300+中证500+中证1000）</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label for="layers">分层数量</label>
+          <select id="layers">
+            <option value="3">3层</option>
+            <option value="5" selected>5层</option>
+            <option value="10">10层</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label for="freq">调仓频率</label>
+          <select id="freq">
+            <option value="D" selected>日频</option>
+            <option value="W">周频</option>
+            <option value="M">月频</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="metrics-grid" aria-label="回测指标">
+        <article class="metric">
+          <span>多空年化收益</span>
+          <strong id="metric-ann-ret" class="positive">--</strong>
+        </article>
+        <article class="metric">
+          <span>多空夏普比率</span>
+          <strong id="metric-sharpe">--</strong>
+        </article>
+        <article class="metric">
+          <span>最大回撤</span>
+          <strong id="metric-drawdown" class="negative">--</strong>
+        </article>
+        <article class="metric">
+          <span>IC 均值</span>
+          <strong id="metric-ic">--</strong>
+        </article>
+        <article class="metric">
+          <span>IC IR</span>
+          <strong id="metric-icir">--</strong>
+        </article>
+      </section>
+
+      <section class="chart-panel">
+        <div class="chart-title">分层净值曲线，展示区分能力</div>
+        <div id="nav-chart" class="chart">
+          <div class="empty-chart">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>等待回测结果</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="table-panel">
+        <div class="chart-title">分层绩效指标</div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>组合</th>
+                <th>年化收益</th>
+                <th>年化波动</th>
+                <th>夏普</th>
+                <th>最大回撤</th>
+                <th>胜率</th>
+              </tr>
+            </thead>
+            <tbody id="metrics-table">
+              <tr><td colspan="6">暂无数据</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="loading-overlay" class="loading-overlay" hidden>
+    <div class="loading-box">
+      <div class="spinner"></div>
+      <h2>正在运行回测</h2>
+      <p id="progress-message">准备中...</p>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      <span id="progress-percent">0%</span>
+    </div>
+  </div>
+
+  <script src="/static/app.js?v=20260713-share-ready"></script>
+</body>
+</html>

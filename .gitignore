@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.DS_Store
+server.out.log
+server.err.log
+data_cache/
+/data/
+logs/
+results/

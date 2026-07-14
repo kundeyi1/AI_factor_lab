@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+numpy
+baostock
+akshare
+requests
+pydantic
+pyarrow
+fastparquet
