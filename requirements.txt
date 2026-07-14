@@ -9,3 +9,4 @@ pydantic
 pyarrow
 fastparquet
 huggingface_hub>=0.32
+streamlit>=1.59,<2

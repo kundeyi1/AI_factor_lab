@@ -11,6 +11,24 @@ short_description: 用自然语言或表达式构建并回测 A 股因子
 
 # AI Factor Lab
 
+## 免费部署到 Streamlit Community Cloud
+
+Hugging Face 个人 Docker Space 需要 PRO 时，可以改用免费的 Streamlit Community Cloud。
+部署入口是 `streamlit_app.py`，回测引擎和 Quant 数据接口仍复用本仓库代码。
+
+1. 打开 <https://share.streamlit.io> 并连接 GitHub。
+2. 选择仓库 `kundeyi1/AI_factor_lab`、分支 `main`、入口文件 `streamlit_app.py`。
+3. 在 Advanced settings 的 Secrets 中配置：
+
+```toml
+HF_DATASET_REPO = "kundeyi/ai-factor-lab-data"
+HF_DATA_ARCHIVE = "quant_data.tar"
+HF_DATA_TOKEN = "<private dataset read-only token>"
+```
+
+首次启动需要下载并解压离线行情包，后续在同一运行环境中会直接复用缓存。应用无访问时会按
+Streamlit Community Cloud 的规则休眠，访问者可以重新唤醒。
+
 AI Factor Lab 是一个独立维护的因子研究网站。FastAPI 同时提供静态网页和回测 API；浏览器负责交互，Python 进程负责读取本地行情、计算因子、执行分层回测并返回净值与绩效指标。
 
 项目仓库：<https://github.com/kundeyi1/AI_factor_lab>
