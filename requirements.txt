@@ -8,3 +8,4 @@ requests
 pydantic
 pyarrow
 fastparquet
+huggingface_hub>=0.32

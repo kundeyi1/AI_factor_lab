@@ -1,0 +1,14 @@
+.git
+.gitignore
+.venv
+__pycache__
+*.py[cod]
+.env
+.DS_Store
+data
+data_cache
+dist
+logs
+results
+server.out.log
+server.err.log

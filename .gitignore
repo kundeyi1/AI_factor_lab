@@ -7,5 +7,6 @@ server.out.log
 server.err.log
 data_cache/
 /data/
+dist/
 logs/
 results/

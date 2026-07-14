@@ -1,10 +1,11 @@
 import logging
+import os
 import uuid
 from concurrent.futures import ThreadPoolExecutor
+from threading import Lock
 from typing import Optional
 
 from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -19,17 +20,13 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="AI Factor Lab")
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 executor = ThreadPoolExecutor(max_workers=1)
 backtester = Backtester()
 jobs: dict[str, dict] = {}
+jobs_lock = Lock()
+max_pending_jobs = max(1, int(os.getenv("AI_FACTOR_LAB_MAX_PENDING_JOBS", "3")))
+max_stored_jobs = max(max_pending_jobs, int(os.getenv("AI_FACTOR_LAB_MAX_STORED_JOBS", "20")))
 
 
 class ChatRequest(BaseModel):
@@ -85,8 +82,19 @@ def run_backtest(request: BacktestRequest):
     if request.layers not in {3, 5, 10}:
         raise HTTPException(status_code=400, detail="分层数量仅支持 3、5、10。")
 
-    job_id = uuid.uuid4().hex
-    jobs[job_id] = {"status": "running", "percent": 0, "message": "任务已创建", "result": None, "detail": None}
+    with jobs_lock:
+        pending_jobs = sum(job["status"] == "running" for job in jobs.values())
+        if pending_jobs >= max_pending_jobs:
+            raise HTTPException(status_code=429, detail="当前回测队列已满，请稍后重试。")
+        _prune_jobs_locked()
+        job_id = uuid.uuid4().hex
+        jobs[job_id] = {
+            "status": "running",
+            "percent": 0,
+            "message": "任务已创建",
+            "result": None,
+            "detail": None,
+        }
 
     def progress(percent: int, message: str):
         jobs[job_id].update({"percent": percent, "message": message})
@@ -161,6 +169,15 @@ def _get_job(job_id: str) -> dict:
     if not job:
         raise HTTPException(status_code=404, detail="未找到回测任务。")
     return job
+
+
+def _prune_jobs_locked() -> None:
+    overflow = len(jobs) - max_stored_jobs + 1
+    if overflow <= 0:
+        return
+    completed = [job_id for job_id, job in jobs.items() if job["status"] != "running"]
+    for job_id in completed[:overflow]:
+        jobs.pop(job_id, None)
 
 
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")

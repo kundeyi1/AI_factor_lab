@@ -1,4 +1,5 @@
 import logging
+import os
 from datetime import datetime
 
 import pandas as pd
@@ -23,6 +24,12 @@ def get_available_pools() -> list[dict[str, str]]:
 class DataFetcher:
     def __init__(self) -> None:
         self._bs_logged_in = False
+        self._offline_data_only = os.getenv("AI_FACTOR_LAB_OFFLINE_DATA_ONLY", "").lower() in {
+            "1",
+            "true",
+            "yes",
+            "on",
+        }
 
     def _login_baostock(self):
         import baostock as bs
@@ -116,6 +123,10 @@ class DataFetcher:
     def get_stock_k_data(self, stock_code: str, start_date: str, end_date: str) -> pd.DataFrame:
         cached = DataCache.load_stock_data(stock_code)
         if not cached.empty and start_date >= cached["date"].min() and end_date <= cached["date"].max():
+            return cached[(cached["date"] >= start_date) & (cached["date"] <= end_date)].copy()
+        if self._offline_data_only:
+            if cached.empty:
+                return pd.DataFrame()
             return cached[(cached["date"] >= start_date) & (cached["date"] <= end_date)].copy()
 
         fetched = self._fetch_from_sources(stock_code, start_date, end_date)
