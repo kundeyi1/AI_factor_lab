@@ -4,11 +4,11 @@
   "source": "腾讯证券公开日线接口",
   "source_docs": "https://akshare.akfamily.xyz/data/stock/stock.html",
   "requested_as_of": "2026-09-10",
-  "start_date": "2024-01-01",
-  "warmup_start": "2023-10-09",
+  "start_date": "2020-01-01",
+  "warmup_start": "2019-10-08",
   "latest_date": "2026-09-10",
   "common_latest_date": "2026-09-10",
-  "snapshot_utc": "2026-09-19T09:47:51.911592+00:00",
+  "snapshot_utc": "2026-09-19T12:57:51.324674+00:00",
   "timezone": "Asia/Shanghai",
   "currency": "CNY",
   "frequency": "daily",
@@ -16,356 +16,464 @@
   "volume_unit": "shares (Tencent raw lots multiplied by 100 for all 12 main-board equities)",
   "amount_unit": "CNY (Tencent raw ten-thousand CNY multiplied by 10000)",
   "universe": "12 fixed illustrative surviving equities, selected before observing this sample's factor results; not historical index membership",
-  "rows": 8556,
-  "trade_dates": 713,
+  "rows": 20205,
+  "trade_dates": 1684,
   "symbols": [
     {
       "code": "000001",
       "name": "平安银行",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000001%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "4c246bb9e7aaa869889f159fa31f6d399319009af191369cea2fdc43889d0b90",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000001%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "944e6d63b8fb06cf89e76ced9302a70b7fe9a98dc7fedd58fb1d1dab89e63a65",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:46.950161+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:44.286525+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000001%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "81d765f42b878ff34e28da381674d4006881b2a41ddbf3f20a7efd5f397d58d3",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000001%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "09d3a47f489e9e4496cff6a4eee861877a55c820a45220f097af97afb4b68b98",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:47.156089+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:44.477509+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000001%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "4c1f23b2fe3149eeaf7f6eeaf5a34df2e24c184ed77e498e10c01e73e829de15",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-19",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:44.660612+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1684,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:47.158061+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:44.664013+00:00"
     },
     {
       "code": "000002",
       "name": "万科A",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000002%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "d0c2a0395b342131e194aaac19f36109261232317a847fa9c8a9d980594e6358",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000002%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "3386916ea1e6c2e0ef2712abad84ead011267dc4252bef171735bd55a676a7bc",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:47.330698+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:44.850642+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000002%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "7ca2d26e893e62d9f4a5061e85dc7ca4ee52cc1801bf3723dd8ff53a72ae82b1",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000002%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "5b0dda761cc43acd4bba4b169af6e60e734ff6e5c6f12c061e05e4ab4fe9902d",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:47.494661+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:45.041259+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000002%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "867b53172e1b7f1db6581bbb20772233595cdf8056b0516b83af3fcf92bbb06d",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-19",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:45.212785+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1684,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:47.496319+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:45.213906+00:00"
     },
     {
       "code": "000333",
       "name": "美的集团",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000333%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "54826466b7710b2178750869ff7b98bf7908d7f1c0876bed7c69a188680902bc",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000333%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "3d9270b302c3d335a0be03cfaaf662778a8813d284953431aff1ab804910797b",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:47.687164+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:45.477103+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000333%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "d1f390f5cb0b3eb7c70adeb7baa97246a095dd90bdd56142d5b0e7cdad4041e4",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000333%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "adb1d46bbedf189dd312ebabc36f9b7b4528f57423cdefc015a8c111f4a4660a",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:47.854700+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:45.660434+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000333%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "418b02755ded94750013e5d649423600287498e4a3c793175837421388aef8d4",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-01-28",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:45.859780+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1684,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:47.855352+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:45.863646+00:00"
     },
     {
       "code": "000651",
       "name": "格力电器",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000651%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "5b771d5a7e2e0937d093c52a11ac57d991aa7f8a47843a30e835566e89ad2ec2",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000651%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "8fd39e00c1c8e0f9fa74800f8dabb5b7ca288aad26fd1ba19e3424aec6710767",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:48.305228+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:46.045364+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000651%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "d77dbe228ae9ae2476d2e560202e3a7914939bb62086fc59ee629d05bce5bcea",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000651%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "17db9f0c26ed6a5d1df8a15af3daa9b066a982b31acba3065dcaf0047c18bb73",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:48.496940+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:46.238489+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000651%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "0d85e8e918a6826d5065636c29258e187fe2f306a6bc414f99f959a00012a3d3",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-11",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:46.423257+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1683,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:48.498567+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:46.426801+00:00"
     },
     {
       "code": "000858",
       "name": "五粮液",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000858%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "bfe39bf42d78ea1f5ff5f157190b9263159d2d8f1b432f0979ec6061dca05589",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000858%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "a6333513adbac6e2711b0208fe44550a6f58ed763e9e542b10de3b5eb4ec90aa",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:48.727049+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:46.639743+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000858%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "9f31edd6cade2d9aaaa5cbda5713081e244dfe943540be16fa5a81521373f140",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000858%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "3e7e8dab181b0dfbf0a9e399fe41635f468e9c7bad6889d98748af7cf9b16da1",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:48.922603+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:46.817991+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz000858%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "c4adb5cfd3fe3c6c555d69c7dd059a90651d35283e0c63d34c5193fc242485ad",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-19",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:47.082384+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1684,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:48.923994+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:47.086169+00:00"
     },
     {
       "code": "002415",
       "name": "海康威视",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz002415%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "f7da9a836594f1c5d0d2dc5e7cf0474486161c91ecd0a641dc11f9cb89da5f77",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz002415%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "a2b339129ccf8fcbbb23adb4be713e7396a60c8cd1f07ca57997240a46bfbcd9",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:49.114610+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:47.281253+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz002415%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "8f97ce9529e275b9dc220d094f28690baf2db03b7b6bb91c2269aefa5609f466",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz002415%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "fa29a6170845563cd8d535fd4d22b52d1bea96b37fd10ea289af87b65d29fba2",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:49.302725+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:47.458613+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sz002415%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "c9e71c6fb9e965a40d12674f89b1d2b20c4389d59b994fa0b21a188966199a65",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-15",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:47.661156+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1682,
+      "first_date": "2019-10-10",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:49.304418+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:47.664607+00:00"
     },
     {
       "code": "600000",
       "name": "浦发银行",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600000%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "43b657967e39548558d3fa09006c524cb4f6ad903b24bc9f7194415dbb8f8bb0",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600000%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "f7851134df18ac6d3a2e10c3ec0b23820686e6d73ab2a3b7cb2d28ba48ade64b",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:49.481243+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:47.865264+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600000%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "c7790456fee563eef0a50c45b8948743c3a8797420571c15006c5e6d1476e2b3",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600000%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "bbc3a667e047a64a4e05b73c01514614dcf699ad0c4ea4b797e184ac3548a8b3",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:49.650019+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:48.104335+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600000%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "8056a0f6d0e68af05c93ec33e360b1641ffafa20a6e3dfe314ef1c82321739e3",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-19",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:48.296868+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1684,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:49.651825+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:48.300215+00:00"
     },
     {
       "code": "600036",
       "name": "招商银行",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600036%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "97b299d29113f5c7e0dd9c7ff1f2a1aaa754e6a9a48197b7e5156b458c1f9660",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600036%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "5b4683ed88ebef367843d13c99d3a789fffce7f48680ef6396b2ca747c4e7f5c",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:49.904540+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:48.486309+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600036%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "561bbff974e805dfc9311bbeea69b4768458ce8479e28bef9266a80b2e60f2ad",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600036%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "2ce89b5cadc2a24e3b3e76974ad763355e8269e16e8d49f6cb63b2b2fa277f76",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:50.113860+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:48.667965+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600036%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "b7382a9cbbed6f73a82c1037453c4c3e437965b25f3ed9c90f95c3440ce71d58",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-19",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:48.874878+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1684,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:50.115547+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:48.878860+00:00"
     },
     {
       "code": "600519",
       "name": "贵州茅台",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600519%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "4184b92620dd2007b8aa2d2b405d6751ca9fbe6cd00716b053fbe18a01c04f78",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600519%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "db9e3364de715d07357eddd31837b3eb3d01a558d10d8b634f487e3ab7d0656c",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:50.301270+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:49.152957+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600519%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "ffc793a6f62b4e407ea2ea0f32d8a62827b38f770b2ff81c6fbc2cb9d91750d0",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600519%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "8d1634f2feb9aef4dfba7130c3a5c9509b1faadf13ccbdfdc4f444fb52f468bc",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:50.478996+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:49.333166+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh600519%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "1317999f71922504d753a07b06eba3c63d3b5703328249a1a85ea14f2e3cce31",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-19",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:49.529971+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1684,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:50.480519+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:49.534139+00:00"
     },
     {
       "code": "601318",
       "name": "中国平安",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601318%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "972ed79e05000e1d0a971b446f082f97d021e85674d554e8b3cbad04973ce0b3",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601318%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "4f7aa1c4b2b19762f31368dedf26a94005033a40677542a155eeb5643ea7d021",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:50.658728+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:49.710400+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601318%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "a27db1ad031de2997eeac9de3e5d62a0c8ebd882ebdb86514e9f671379966ccd",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601318%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "d3b6304bbe0732238fcdfd8b6cbde3915a7fd51484fdc4dbfd221b891e2822a2",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:51.101003+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:49.884183+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601318%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "6f14b45d118b053a73033293e06d22196ee747635082fd204462a22788feeafa",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-19",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:50.062328+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1684,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:51.102731+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:50.065227+00:00"
     },
     {
       "code": "601398",
       "name": "工商银行",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601398%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "0e922020367ea8ca4f7d3ce103e93c5f38b29801cd21b3f609b470f4b4a3bedd",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601398%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "c3a3dfc24448552831b49290cc80aeb08642e991caa0809fca3661f3667b8578",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:51.330766+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:50.248161+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601398%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "f63f19ee9fcebce0dddf697640c7135e408951e2c3aff7f1ebe28d102ad3d72a",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601398%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "e2848bd636dfaf603962aaf86822b45997ff695bb9fe2700e9e8687146404b38",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:51.520019+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:50.430116+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601398%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "502f9378e4a227fef696dbe1609fde862cbe7f9f0c7703014b487819e728074c",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-19",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:50.618932+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1684,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:51.521944+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:50.622693+00:00"
     },
     {
       "code": "601888",
       "name": "中国中免",
       "requests": [
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601888%2Cday%2C2023-10-01%2C2026-09-11%2C640%2Cqfq",
-          "sha256": "02c7b90a1e32b412e27b89720d6c13749de16d18a7b40de726c96bad0f75aa1f",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601888%2Cday%2C2019-10-01%2C2026-09-11%2C640%2Cqfq",
+          "sha256": "feccf6ca43428bc6762125d4fecf247798f5a3aa0ef8a6be0f9ea37149e47de9",
           "raw_rows": 640,
           "overlap_verified": 0,
           "first_date": "2024-01-22",
           "last_date": "2026-09-11",
-          "retrieved_at_utc": "2026-09-19T09:47:51.709172+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:50.823978+00:00"
         },
         {
-          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601888%2Cday%2C2023-10-01%2C2024-03-22%2C640%2Cqfq",
-          "sha256": "ff117d76a4a39808d339edb75419b76f206fd53813b81c27108f0a07c057d40a",
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601888%2Cday%2C2019-10-01%2C2024-03-22%2C640%2Cqfq",
+          "sha256": "588399d475b04f3b364d88c08be7802ac976f5474ed1473d31ab7f4afb8fedde",
           "raw_rows": 640,
           "overlap_verified": 39,
           "first_date": "2021-08-02",
           "last_date": "2024-03-22",
-          "retrieved_at_utc": "2026-09-19T09:47:51.896021+00:00"
+          "retrieved_at_utc": "2026-09-19T12:57:51.018626+00:00"
+        },
+        {
+          "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?param=sh601888%2Cday%2C2019-10-01%2C2021-10-01%2C640%2Cqfq",
+          "sha256": "49560db459e51924770ec6b3aa563c9a9b379cd27c62596fc0c45c4cb6906b8f",
+          "raw_rows": 640,
+          "overlap_verified": 42,
+          "first_date": "2019-02-19",
+          "last_date": "2021-09-30",
+          "retrieved_at_utc": "2026-09-19T12:57:51.272584+00:00"
         }
       ],
-      "raw_rows": 1280,
-      "included_rows": 713,
-      "first_date": "2023-10-09",
+      "raw_rows": 1920,
+      "included_rows": 1684,
+      "first_date": "2019-10-08",
       "last_date": "2026-09-10",
-      "retrieved_at_utc": "2026-09-19T09:47:51.896883+00:00"
+      "retrieved_at_utc": "2026-09-19T12:57:51.277242+00:00"
     }
   ],
   "validation": {
@@ -378,9 +486,9 @@
       "000001": 0,
       "000002": 0,
       "000333": 0,
-      "000651": 0,
+      "000651": 1,
       "000858": 0,
-      "002415": 0,
+      "002415": 2,
       "600000": 0,
       "600036": 0,
       "600519": 0,
@@ -389,7 +497,7 @@
       "601888": 0
     }
   },
-  "csv_sha256": "f6e6dc2d4eff87aa15c7fd68388e4f4a8035cc79332d5600cf10b2a2c9727a2e",
+  "csv_sha256": "5ee153c688caa75b0568cd0ac097ec9e658cefb27ec2c085045393e624f97357",
   "limitations": [
     "Demonstration only, no investment-performance claim",
     "No formal exchange-calendar coverage audit",
